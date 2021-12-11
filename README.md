@@ -9,6 +9,10 @@ mvn clean package -Pprod
 
 
 DB:
+
+Convenience class for building a DataSource. Provides a limited subset of theproperties
+ supported by a typical DataSource as well as detection logic to pickthe most suitable pooling DataSource implementation. 
+ 
 The following pooling DataSource implementations are supported by this builder.When no type has been explicitly set, the first available poolimplementation will be picked: 
 •Hikari (com.zaxxer.hikari.HikariDataSource)
 •Tomcat JDBC Pool (org.apache.tomcat.jdbc.pool.DataSource)
