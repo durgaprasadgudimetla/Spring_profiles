@@ -77,4 +77,24 @@ spring:
      # hibernate:
      
       #  dialect: org.hibernate.dialect.PostgreSQLDialect
+      
+      
+application.properties:
+------------------------
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.hibernate.show-sql=true
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+
+--
+spring.datasource.initialization-mode=always
+spring.datasource.initialize=true
+spring.datasource.schema=classpath:/schema.sql
+spring.datasource.continue-on-error=true
+
+
+https://www.callicoder.com/spring-boot-jpa-hibernate-postgresql-restful-crud-api-example/
+
+https://dzone.com/articles/bounty-spring-boot-and-postgresql-database
    
