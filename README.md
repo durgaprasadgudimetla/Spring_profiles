@@ -5,3 +5,12 @@ java -jar  -Dspring.profiles.active=dev  C:\Users\prasa\Documents\workspace-spri
 
 
 mvn clean package -Pprod
+
+
+
+DB:
+The following pooling DataSource implementations are supported by this builder.When no type has been explicitly set, the first available poolimplementation will be picked: 
+•Hikari (com.zaxxer.hikari.HikariDataSource)
+•Tomcat JDBC Pool (org.apache.tomcat.jdbc.pool.DataSource)
+•Apache DBCP2 (org.apache.commons.dbcp2.BasicDataSource)
+•Oracle UCP (oracle.ucp.jdbc.PoolDataSourceImpl)
