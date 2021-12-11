@@ -18,3 +18,23 @@ The following pooling DataSource implementations are supported by this builder.W
 •Tomcat JDBC Pool (org.apache.tomcat.jdbc.pool.DataSource)
 •Apache DBCP2 (org.apache.commons.dbcp2.BasicDataSource)
 •Oracle UCP (oracle.ucp.jdbc.PoolDataSourceImpl)
+
+
+server:
+  port: 2023
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+     ddl-auto: update
+     properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+   
