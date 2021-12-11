@@ -37,4 +37,44 @@ spring:
      properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        
+        
+        
+        
+        
+ spring application.yml:
+ -----------------------
+ 
+ 
+ server:
+  port: 2023
+spring:
+  profiles:
+    active: 
+    - local
+---
+spring:
+ profiles: local
+ flight.datasource:
+   hibernate:
+     properties:
+       hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+     driver-class-name: org.postgresql.Driver
+     url: jdbc:postgresql://localhost:5432/postgres
+     username: postgres
+     password: postgres
+ jpa:
+  hibernate:
+    ddl-auto: update
+   # hikari:
+   #   connection-timeout: 20000
+   #   maximum-pool-size: 5
+ #jpa:
+  #  hibernate:
+   #  ddl-auto: update
+    # properties:
+     # hibernate:
+     
+      #  dialect: org.hibernate.dialect.PostgreSQLDialect
    
